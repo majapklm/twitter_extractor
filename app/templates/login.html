@@ -1,0 +1,24 @@
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="{{ url_for('static', filename='js/button.js') }}"></script></head>
+{% extends "base.html" %}
+{% block content %}
+<h1>Sign In</h1>
+<form action="" method="post" name="login">
+    {{ form.hidden_tag() }}
+	{% if error!=None %}
+		<span style="color:red;">{{error}}</span>
+	{%endif%}<hr>Username:<br>
+       <div class="password_field"> {{ form.username(size=90,tabindex=1)}}<button type="button" width="1" height="1" ><img src="{{ url_for('static', filename='mg/a.jpg') }}" style="visibility:hidden" alt="Search" width="13" height="13"/></button></div>
+	
+	{% for error in form.username.errors %}
+          <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>Password:<br>
+<div class="password_field">{{ form.password(size=29,tabindex=2)}}<button type="button" width="7" height="1" id="pass_show" type="password" onclick="mouseoverPass();" onmouseover="mouseoverPass();" onmouseout="mouseoutPass();" ><img tabindex="12" src="{{ url_for('static',filename='img/a.jpg') }}" alt="Search" width="13" height="13"/></button></div>
+        {% for error in form.password.errors %}
+          <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    {{ form.rememberme(tabindex=3)}} Remember Me<br><span style="color: blue;"><a href='/forgotpassword'>Forgot Password</a></span>
+    <p><input type="submit" value="Sign In" tabindex=4></p>
+</form><hr>
+{% endblock %}

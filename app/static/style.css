@@ -1,0 +1,15 @@
+.password_field {
+    display: inline-block;
+    border: 1px inset #ccc;
+    color:blue;
+}
+
+.password_field input {
+    border: none;
+    padding: 0;
+}
+
+.password_field button {
+    border: none;
+    background: none;
+}

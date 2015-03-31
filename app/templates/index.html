@@ -1,0 +1,17 @@
+<head></head>
+{% extends "base.html" %}
+{% block content %}
+<form action="" method="post" name="post">
+        <input type="text" name="twittername" tabindex="1" required>
+        <p><input name="tweet" type="submit"  value="get tweets"></p>
+        </form>
+{%if datas%}
+<div align="left">
+<h2><h2 style="text-align:left;"><font face="arial" color="red"><i><b>.....Tweets of the user.....</i></b></h2>
+<ol>
+        {%for data in datas%}
+                <li>{{data["text"]}}</li>
+        {%endfor%}
+</ol>
+</div>{%endif%}
+{% endblock %}

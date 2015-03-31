@@ -1,0 +1,43 @@
+h1 {color:red;font-size:25pt;}
+p {color:blue;}
+s1{color: green; font-size: 15pt;}
+.password_field {
+    display: inline-block;
+    border: 1px inset #ccc;
+    color:blue;
+}
+
+.password_field input {
+    border: none;
+    padding: 0;
+}
+
+.password_field button {
+    border: none;
+    background: none;
+}#content {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+ 
+a:hover{
+    text-decoration: none;
+}
+ 
+header {
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    clear: both;
+}
+ 
+#wrap {
+    max-width: 700px;
+    margin: 5px 10px 10px 10px;
+    padding: 10px;
+    text-align: left;
+}
+#url-result {
+    color: #00e000;
+    display: hidden;
+}
